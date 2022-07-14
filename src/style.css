@@ -1,125 +1,93 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 body {
-  background-color: #f7f7e8;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10vh;
-  width: 60vw;
-}
-
-.head {
-  background-color: #000;
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #333;
-  letter-spacing: 1.5px;
-}
-
-h1 {
-  font-size: 1.5rem;
-  padding: 1rem;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: lightgrey;
 }
 
-.refresh {
-  background-color: black;
-  color: white;
-  border-color: #000;
-  margin: 0;
-  padding: 6px;
+section {
+  box-shadow: 1px 6px 17px -1px rgba(34, 60, 80, 0.19);
+  width: 40vw;
+  font-family: Poppins, serif;
+  font-size: 18px;
+  background-color: #fff;
+  margin-left: 28%;
+  margin-top: 10%;
 }
 
-.btn-1 {
-  border: none;
-  background-color: rgba(0, 0, 0, 0);
-  margin-right: 1rem;
-  cursor: pointer;
-  color: #fff;
-}
-
-.input-sec {
+.todos-Container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #eee;
-  border-bottom: 1px solid #333;
+  flex-direction: column;
 }
 
-body > section > div.input-sec > input {
-  display: block;
+.todoContainer {
+  margin: 10px 15px;
+  padding: 30px 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+i {
+  float: right;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 15px;
+  font-weight: 500;
+}
+
+.header .fa-sync {
+  margin-top: 25px;
+}
+
+.header h1 {
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  border: transparent;
+  border-bottom: 1px solid grey;
+  margin: auto 10px;
   font-style: italic;
-  font-size: 1.5rem;
-  padding: 0.5rem;
-  border-style: hidden;
-  background-color: #eee;
-  width: 90%;
+  padding: 10px;
 }
 
-.btn2 {
-  padding-right: 3%;
-  background-color: #eee;
-  border-style: none;
+form button {
+  border: none;
+  padding: 14px;
+  color: lightgray;
 }
 
-.list-contaner {
+form button:hover {
+  color: rgb(139, 43, 43);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.fa-trash-alt {
+  display: none;
+}
+
+.trash-active {
   display: block;
-  overflow-y: scroll;
-  height: 50vh;
-  background-color: #fff;
 }
 
-.itm {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.5rem;
-  border-style: hidden;
-  background-color: #fff;
-  border-bottom: 1px solid #333;
-  height: 3rem;
+.edited-disable {
+  display: none;
 }
 
-.para-1 {
-  margin-left: 0.5rem;
-  margin-right: auto;
-  letter-spacing: 1.5px;
-  width: 100%;
+.checkedContainer {
+  background-color: rgb(250, 237, 220);
 }
 
-.fa,
-.fas {
-  cursor: pointer;
-}
-
-.foot {
-  background-color: bisque;
-  letter-spacing: 1.5px;
-}
-
-.foot h2 {
-  font-size: 1rem;
-  border-top: 1px solid #333;
-  padding: 1rem;
-  margin: 0;
-  text-align: center;
-  background-color: #d3d3d3;
-  cursor: pointer;
+.checkToDo {
+  text-decoration: line-through;
 }
