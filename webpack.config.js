@@ -12,6 +12,7 @@ module.exports = {
       template: './src/index.html',
     }),
   ],
+
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
