@@ -1,0 +1,170 @@
+$ff: sans-serif;
+$border-check: 1px solid crimson;
+
+@mixin margin-sides {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin flex($direction, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $ff;
+  background-color: #f7f7e8;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+}
+
+section {
+  @include margin-sides();
+
+  margin-top: 10vh;
+  width: 50vw;
+  box-shadow: 10px 10px 5px 0 rgba(46, 31, 31, 0.75);
+
+  // Top Section
+  .topSec {
+    background-color: rgb(34, 25, 25);
+    color: white;
+
+    @include flex(row, space-between, center);
+
+    border-bottom: 1px solid #333;
+    letter-spacing: 1.5px;
+
+    h1 {
+      font-size: 1.5rem;
+      padding: 1rem;
+      margin: 0;
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+      margin-right: 1rem;
+      cursor: pointer;
+      color: white;
+    }
+  }
+
+  // Bottom Section
+  .botSec {
+    background-color: rgb(190, 159, 120);
+    letter-spacing: 1.5px;
+
+    h2 {
+      font-size: 1rem;
+      border-top: 1px solid #333;
+      padding: 1rem;
+      margin: 0;
+      text-align: center;
+      background-color: lightgrey;
+      cursor: pointer;
+    }
+  }
+
+  //Input Section
+  .inputSec {
+    @include flex(row, space-between, center);
+
+    background-color: #eee;
+    border-bottom: 1px solid #333;
+
+    input {
+      display: block;
+      font-style: italic;
+      font-size: 1.5rem;
+      padding: 0.5rem;
+      border-style: hidden;
+      background-color: #eee;
+      width: 90%;
+
+      &:focus {
+        outline: none;
+        color: blue;
+      }
+
+      &:focus::placeholder {
+        color: transparent;
+      }
+    }
+
+    button {
+      border: none;
+      margin-right: 1rem;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+
+  // List Container
+  .listContainer {
+    display: block;
+    overflow-y: scroll;
+    height: 50vh;
+    background-color: white;
+
+    li {
+      @include flex(row, space-between, center);
+
+      font-size: 1.5rem;
+      border-style: hidden;
+      background-color: white;
+      border-bottom: 1px solid #333;
+      height: 3rem;
+
+      &:focus {
+        color: rgb(48, 117, 149);
+        background-color: bisque;
+        font-size: 1.7rem;
+      }
+
+      &.checked {
+        text-decoration: line-through;
+        opacity: 0.5;
+        background-color: lightgrey;
+      }
+
+      .checkbox {
+        margin-left: 0.5rem;
+        cursor: pointer;
+      }
+
+      p {
+        margin-left: 0.5rem;
+        margin-right: auto;
+        letter-spacing: 1.5px;
+        width: 100%;
+      }
+
+      button {
+        border: none;
+        margin-right: 1rem;
+        cursor: move;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    width: 80vw;
+  }
+}
