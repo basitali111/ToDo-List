@@ -1,3 +1,4 @@
+// checking status
 export default class Status {
   constructor() {
     this.completed = false;
