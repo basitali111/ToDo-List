@@ -67,7 +67,7 @@ addBtn.addEventListener('click', () => {
   }
 });
 
-// Keyboard Support
+// Keyboard Support key
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
     addBtn.click();
