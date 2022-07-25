@@ -66,12 +66,12 @@ section {
 
   // Bottom Section
   .botSec {
-    background-color: rgb(190, 159, 120);
+    background-color: rgb(190, 152, 104);
     letter-spacing: 1.5px;
 
     h2 {
       font-size: 1rem;
-      border-top: 1px solid #333;
+      border-top: 1px solid rgb(7, 6, 6);
       padding: 1rem;
       margin: 0;
       text-align: center;
@@ -98,7 +98,7 @@ section {
 
       &:focus {
         outline: none;
-        color: blue;
+        color: rgb(55, 55, 201);
       }
 
       &:focus::placeholder {
@@ -127,7 +127,7 @@ section {
       font-size: 1.5rem;
       border-style: hidden;
       background-color: white;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid rgb(42, 30, 30);
       height: 3rem;
 
       &:focus {
