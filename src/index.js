@@ -76,5 +76,8 @@ window.addEventListener('keydown', (e) => {
 
 // On Page Load
 window.onload = () => {
+    if(localStorage['todo-list'].length>0){
+    taskList.listArray = JSON.parse(localStorage['todo-list']);
+  }
   taskList.display();
 };
