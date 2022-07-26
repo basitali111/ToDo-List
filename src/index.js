@@ -27,6 +27,7 @@ const title2 = document.createElement('h2');
 title2.textContent = 'Clear all completed';
 
 // Clear All Event
+const taskList = new TaskList();
 title2.addEventListener('click', () => {
   const taskList = new TaskList();
   taskList.clearAllCompleted();
@@ -53,7 +54,6 @@ body.append(conSec);
 
 let index = 0;
 const completed = false;
-const taskList = new TaskList();
 // Add Button Event
 addBtn.addEventListener('click', () => {
   if (!input.value.trim()) {
