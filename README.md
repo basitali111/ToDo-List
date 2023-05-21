@@ -1,4 +1,4 @@
-I apologize for the mistake. I will rewrite the README file according to the To-Do list project. Here is the revised version:
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # To-Do List with ES6
 
