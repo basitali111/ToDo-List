@@ -32,7 +32,8 @@ The main features of this project are:
 
 You can view the live version of this project here: [Live Demo Link](https://basit-todolist.netlify.app/)
 
-![Screenshot of the web application](./screenshot.png)
+![Screenshot of Web Application](https://github.com/basitali111/ToDo-List/assets/63063973/7005ff6c-5aa3-4155-b6b7-b010105d42d9)
+
 
 ## Getting Started
 
